@@ -1,0 +1,29 @@
+{
+  "name": "dmi-site",
+  "version": "1.0.0",
+  "description": "Website for Dance Music Initiative.",
+  "author": "Chad Engler <englercj@live.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean": "rm -rf public/",
+    "build": "npm run clean && webpack --progress",
+    "dev": "npm run clean && webpack-dev-server --colors --inline --content-base public/ --config webpack.dev.config.js",
+    "start": "npm run build"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.13.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.21.0",
+    "image-webpack-loader": "^1.8.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
