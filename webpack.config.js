@@ -62,7 +62,7 @@ module.exports = {
             filename: 'index.html',
             template: './html/index.ejs',
             favicon: './images/favicons/favicon.png',
-            title: 'Smart House',
+            title: 'Dance Music Initiative',
             cache: true,
         }),
     ],
