@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
 });
 
 function onScroll() {
-    const scrollTop = document.body.scrollTop;
+    const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
 
     for (let i = 0; i < elements.length; ++i) {
         const elm = elements[i];
