@@ -1,12 +1,15 @@
+@import "../node_modules/font-awesome/less/font-awesome.less";
+@import "./variables.less";
+
 body, html {
     height: 100%;
 
     margin: 0;
     padding: 0;
 
-    background: #242529;
+    background: @background;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
     font-weight: 400;
 }
 
@@ -25,8 +28,63 @@ body, html {
     background-repeat: no-repeat;
 
     &.record { background-image: url('../images/record-lg.png'); }
-    &.jacket { background-image: url('../images/jacket-lg.png'); }
-    &.sleeve { background-image: url('../images/sleeve-front-lg.png'); }
+
+    &.sleeve {
+        color: #4b4840;
+        background-image: url('../images/sleeve-front-lg.png');
+
+        & h1 {
+            opacity: 0.8;
+            font-size: 2.9vmin;
+            font-weight: bold;
+        }
+    }
+
+    &.jacket {
+        background-image: url('../images/jacket-lg.png');
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &.contact {
+        background-color: @background;
+
+        text-align: center;
+        color: #ccc;
+
+        h1 {
+            margin-bottom: 8vmin;
+
+            font-size: 10vmin;
+        }
+
+        a, a:hover, a:visited {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        p {
+            font-size: 5vmin;
+            margin-bottom: 10vmin;
+
+            a {
+                font-size: 6.5vmin;
+            }
+        }
+
+        .social {
+            font-size: 10vmin;
+        }
+
+        // & .facebook { color: @facebook; }
+        // & .soundcloud { color: @soundcloud; }
+        // & .mixcloud { color: @mixcloud; }
+        // & .instagram { color: @instagram; }
+        // & .twitter { color: @twitter; }
+        // & .pinterest { color: @pinterest; }
+        // & .youtube { color: @youtube; }
+    }
 
     h1 {
         margin: 0;
@@ -44,7 +102,7 @@ body, html {
 .content {
     position: relative;
     left: 25%;
-    top: 55%;
+    top: 57%;
 
     // not sure why this is needed....
     @media all and (orientation:portrait) {
@@ -53,6 +111,10 @@ body, html {
 
     width: 50%;
 
-    font-size: 2.5vmin;
+    font-size: 2.25vmin;
+    text-align: center;
+}
+
+.center-me {
     text-align: center;
 }
