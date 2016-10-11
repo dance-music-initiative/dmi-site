@@ -1,6 +1,8 @@
 @import "../node_modules/font-awesome/less/font-awesome.less";
 @import "./variables.less";
 
+* { box-sizing: border-box; }
+
 body, html {
     height: 100%;
 
@@ -15,26 +17,27 @@ body, html {
 
 .section-image {
     position: relative;
-    z-index: 10;
 
     height: 100%;
 
+    margin-bottom: 15vmin;
     margin-left: 50%;
+    padding-bottom: 10vmin;
     transform: translate(-50%, 0%);
 
     background-position: top center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 
     &.record {
         background-image: url('../images/record-lg.png');
-        width: 100vmin;
+        width: 98vmin;
     }
 
     &.sleeve {
         color: #4b4840;
         background-image: url('../images/sleeve-front-lg.png');
-        width: 101vmin;
+        width: 99vmin;
 
         & h1 {
             opacity: 0.8;
@@ -48,7 +51,7 @@ body, html {
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
-        width: 102vmin;
+        width: 100vmin;
 
         box-shadow: 0 0 1vmin #111;
     }
@@ -111,7 +114,6 @@ body, html {
 
 .stick {
     position: fixed;
-    z-index: 5;
     top: 0;
     margin-top: 0;
 }
