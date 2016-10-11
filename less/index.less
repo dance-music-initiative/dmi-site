@@ -18,20 +18,23 @@ body, html {
     z-index: 10;
 
     height: 100%;
-    width: 100vmin;
 
     margin-left: 50%;
     transform: translate(-50%, 0%);
 
     background-position: top center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 
-    &.record { background-image: url('../images/record-lg.png'); }
+    &.record {
+        background-image: url('../images/record-lg.png');
+        width: 100vmin;
+    }
 
     &.sleeve {
         color: #4b4840;
         background-image: url('../images/sleeve-front-lg.png');
+        width: 101vmin;
 
         & h1 {
             opacity: 0.8;
@@ -45,6 +48,9 @@ body, html {
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
+        width: 102vmin;
+
+        box-shadow: 0 0 1vmin #111;
     }
 
     &.contact {
@@ -52,6 +58,8 @@ body, html {
 
         text-align: center;
         color: #ccc;
+
+        width: 105vmin;
 
         h1 {
             margin-bottom: 8vmin;
@@ -74,16 +82,25 @@ body, html {
         }
 
         .social {
-            font-size: 10vmin;
-        }
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 5vmin;
 
-        // & .facebook { color: @facebook; }
-        // & .soundcloud { color: @soundcloud; }
-        // & .mixcloud { color: @mixcloud; }
-        // & .instagram { color: @instagram; }
-        // & .twitter { color: @twitter; }
-        // & .pinterest { color: @pinterest; }
-        // & .youtube { color: @youtube; }
+            h2 {
+                font-size: 2vmin;
+                margin: 0 0 1.5vmin 0;
+            }
+
+            .contact-mail {
+                font-size: 2.75vmin;
+                vertical-align: top;
+            }
+
+            .social-row {
+                margin-bottom: 5vmin;
+            }
+        }
     }
 
     h1 {
