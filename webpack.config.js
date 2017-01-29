@@ -34,10 +34,10 @@ module.exports = {
                 },
             },
             {
-                test: /\.(png|jpe?g|svg|gif|ttf|woff2?|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/i,
+                test: /\.(png|jpe?g|svg|gif|ttf|woff2?|eot|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/i,
                 loaders: [
                     `file?name=${ASSET_PATH}/[hash].[ext]`,
-                    'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false',
+                    'image-webpack?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false',
                 ],
             },
             {
@@ -47,6 +47,12 @@ module.exports = {
                     'css?sourceMap!less?sourceMap',
                     { allChunks: true }
                 ),
+            },
+            {
+                test: /\.(json|xml)$/i,
+                loaders: [
+                    `file?name=${ASSET_PATH}/[hash].[ext]`,
+                ],
             },
         ],
     },
@@ -61,9 +67,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './html/index.ejs',
-            favicon: './images/favicons/favicon.png',
+            favicon: './images/favicons/favicon.ico',
             title: 'Dance Music Initiative',
             cache: true,
         }),
     ],
-}
+};

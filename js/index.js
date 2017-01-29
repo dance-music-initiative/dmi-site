@@ -123,7 +123,7 @@ function scrollTo(to, duration) {
 
     const body = document.body;
     const difference = to - body.scrollTop;
-    const perTick = (difference / duration) * 10; // eslint-disable-line no-magic-numbers
+    const perTick = (difference / duration) * 10;
 
     setTimeout(function _scrollToTick() {
         body.scrollTop = (body.scrollTop || document.documentElement.scrollTop) + perTick;
