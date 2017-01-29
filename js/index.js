@@ -12,9 +12,7 @@ const domready = require('domready');
 // some globals
 let contactElement = null;
 let scrollIndicator = null;
-let scrollHidden = false;
 let contactFadedIn = false;
-let isFirstRender = true;
 const CONTACT_FADE_HEIGHT_FACTOR = 0.25;
 const SCROLL_ANIM_INTERVAL_MS = 10;
 const SCROLL_ANIM_TIME_MS = 1000;
@@ -60,18 +58,6 @@ function onRender() {
 
     const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (!scrollHidden && scrollTop !== 0) {
-        scrollHidden = true;
-        scrollIndicator.classList.remove('fadeInDownCentered');
-
-        if (isFirstRender) {
-            scrollIndicator.classList.add('hide');
-        }
-        else {
-            scrollIndicator.classList.add('fadeOut');
-        }
-    }
-
     for (let i = 0; i < elements.length; ++i) {
         const element = elements[i];
 
@@ -99,8 +85,6 @@ function onRender() {
             contactElement.section.children[0].classList.add('fadeIn');
         }
     }
-
-    isFirstRender = false;
 }
 
 function onResize() {
