@@ -5,6 +5,7 @@
         "browser": true
     },
     "rules": {
-        "prefer-template": 0
+        "prefer-template": 0,
+        "curly": [2, "all"]
     }
 }

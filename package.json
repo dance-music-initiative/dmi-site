@@ -28,6 +28,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "domready": "^1.0.8",
     "font-awesome": "^4.6.3"
   }
 }

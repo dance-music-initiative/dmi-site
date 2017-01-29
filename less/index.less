@@ -1,5 +1,6 @@
 @import "../node_modules/font-awesome/less/font-awesome.less";
 @import "./variables.less";
+@import "./animations.less";
 
 * { box-sizing: border-box; }
 
@@ -15,15 +16,28 @@ body, html {
     font-weight: 400;
 }
 
+#scrolling-indicator {
+    .centered();
+
+    position: fixed;
+    bottom: 3vmin;
+
+    img {
+        opacity: 0.75;
+        width: 30vmin;
+        height: 11vmin;
+    }
+}
+
 .section-image {
+    .centered();
+
     position: relative;
 
     height: 100%;
 
     margin-bottom: 15vmin;
-    margin-left: 50%;
     padding-bottom: 10vmin;
-    transform: translate(-50%, 0%);
 
     background-position: top center;
     background-size: contain;
@@ -31,13 +45,13 @@ body, html {
 
     &.record {
         background-image: url('../images/record-lg.png');
-        width: 98vmin;
+        width: 96vmin;
     }
 
     &.sleeve {
         color: #4b4840;
         background-image: url('../images/sleeve-front-lg.png');
-        width: 99vmin;
+        width: 98vmin;
 
         & h1 {
             opacity: 0.8;
@@ -51,7 +65,7 @@ body, html {
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
-        width: 100vmin;
+        width: 99vmin;
 
         box-shadow: 0 0 1vmin #111;
     }
@@ -90,6 +104,11 @@ body, html {
                 margin-bottom: 5vmin;
             }
         }
+
+        .social-icon-image {
+            width: 5vmin;
+            height: 5vmin;
+        }
     }
 
     h1 {
@@ -109,7 +128,7 @@ body, html {
     left: 25%;
     top: 57%;
 
-    // not sure why this is needed....
+    // not sure why this is needed, I'm bad at css...
     @media all and (orientation:portrait) {
         top: 37%;
     }
@@ -122,4 +141,8 @@ body, html {
 
 .center-me {
     text-align: center;
+}
+
+.hide {
+    display: none;
 }

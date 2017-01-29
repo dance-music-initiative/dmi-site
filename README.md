@@ -7,11 +7,12 @@ The CSS uses viewport units, which precludes it from working in these browsers:
 - Internet Explorer 8
 - Opera Mini 8
 
-## TODO:
+## Development
 
-- Scrolling indicator under the record (first page)
-- Clicking record auto scrolls to bottom
-- Add small 2px margin around record sections
-- Scrolling stutters on Safari Mobile
-- Fade in context page text.
-- Patreon icon
+### First Time Setup
+
+### Folder Structure
+
+### Auto-rebuild and dev server
+
+### Build for release
