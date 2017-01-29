@@ -52,3 +52,7 @@ If you need to create a new build to be deployed onto the production servers, yo
 simply open a terminal to the folder you cloned this repository into and run `npm start`.
 That will build all the site files to the `public/` folder, the contents of which can
 be uploaded directly to the S3 bucket.
+
+## TODO:
+
+- Fix Internet Explorer...
